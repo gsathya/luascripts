@@ -7,10 +7,5 @@ if arg then
    port = arg[2] or port
 end
 
-
-
-status, msg = assert(true, "Failed")
-print(status, msg)
-
-status, msg2 = assert(true, "Passed")
-print(status, msg2)
+client, msg = assert(socket.connect(host, port))
+print(client, msg)
